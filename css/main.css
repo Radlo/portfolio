@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300");
+:root {
+  scroll-behavior: smooth;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+section.showcase {
+  height: 100vh;
+  position: absolute;
+}
+
+section.showcase .overlay {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11;
+  background: rgba(13, 13, 13, 0.3);
+  padding: 3rem;
+  text-align: center;
+  -webkit-animation: fade-in 5s linear;
+          animation: fade-in 5s linear;
+  -webkit-animation: slide-down 2s forwards;
+          animation: slide-down 2s forwards;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    top: -150%;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -150%;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section.showcase .overlay h1 {
+  font-size: 3.8rem;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+
+section.showcase .overlay h1 span.red {
+  color: #a70000;
+}
+
+section.showcase .overlay h2 {
+  color: white;
+}
+
+section.showcase #learn-more-btn {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 1rem 2rem;
+  color: white;
+  background: rgba(13, 13, 13, 0.4);
+  border-radius: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-animation: fade-in 5s linear;
+          animation: fade-in 5s linear;
+  -webkit-animation: slide-up 2s forwards;
+          animation: slide-up 2s forwards;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    top: 150%;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 150%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section.showcase #learn-more-btn:hover {
+  cursor: pointer;
+  background-color: #0094d0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.collapse {
+  -webkit-animation: collapse .75s backwards;
+          animation: collapse .75s backwards;
+}
+
+.none {
+  display: none;
+}
+
+@-webkit-keyframes collapse {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150vh;
+  }
+}
+
+@keyframes collapse {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150vh;
+  }
+}
+
+div.nav-bar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  height: 4.5rem;
+  -webkit-box-shadow: 3px 3px 12px grey;
+          box-shadow: 3px 3px 12px grey;
+  background-color: white;
+}
+
+div.nav-bar .logo {
+  float: left;
+  width: 50%;
+  line-height: 1.6rem;
+}
+
+div.nav-bar .logo img {
+  float: left;
+  width: 2.5rem;
+}
+
+div.nav-bar .logo .title {
+  float: left;
+  margin-left: 0.6rem;
+}
+
+div.nav-bar .logo .title h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+}
+
+div.nav-bar .logo .title h1 span.red {
+  color: #a70000;
+}
+
+div.nav-bar .logo .title h2 {
+  font-size: 1rem;
+}
+
+div.nav-bar ul {
+  float: right;
+  width: 50%;
+}
+
+div.nav-bar ul li {
+  display: inline-block;
+}
+
+div.nav-bar ul li a {
+  text-decoration: none;
+  margin: 1rem;
+  line-height: 2.5rem;
+  color: #505050;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+div.nav-bar ul li a:hover {
+  color: black;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.nav-bar ul li a:active {
+  color: aqua;
+}
+
+.presentation {
+  padding-top: 7rem;
+  height: 100vh;
+  text-align: center;
+  background-color: #2174b3;
+}
+
+.presentation img {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: 0;
+}
+
+.presentation h1 {
+  text-align: center;
+  padding-bottom: 0.8rem;
+}
+
+.presentation h1 .font, .presentation h1 .red {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.presentation h1 .red {
+  color: #a70000;
+}
+
+.presentation p {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.about {
+  height: 100vh;
+  background: white;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  line-height: 2rem;
+}
+
+.about h2 {
+  font-family: 'Comfortaa', cursive;
+  padding-top: 13rem;
+  font-size: 2rem;
+}
+
+.about p {
+  padding: 2rem 8rem;
+  font-size: 1rem;
+}
+
+.services {
+  height: 100vh;
+  text-align: center;
+  line-height: 2rem;
+  background-image: url(/assets/waves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services h2 {
+  font-family: 'Comfortaa', cursive;
+  padding-top: 7rem;
+  font-size: 2rem;
+}
+
+.services .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". firstService secondService thirdService .";
+  grid-gap: 3rem;
+  padding: 2rem;
+}
+
+.services p.service-title {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.services .firstService {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: firstService;
+  padding: 2rem;
+  -webkit-box-shadow: 3px 3px 10px 3px grey;
+          box-shadow: 3px 3px 10px 3px grey;
+  background: white;
+}
+
+.services .secondService {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: secondService;
+  padding: 2rem;
+  -webkit-box-shadow: 3px 3px 10px 3px grey;
+          box-shadow: 3px 3px 10px 3px grey;
+  background: white;
+}
+
+.services .thirdService {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: thirdService;
+  padding: 2rem;
+  -webkit-box-shadow: 3px 3px 10px 3px grey;
+          box-shadow: 3px 3px 10px 3px grey;
+  background: white;
+}
+
+.services .hover:hover {
+  -webkit-box-shadow: 3px 3px 20px 5px grey;
+          box-shadow: 3px 3px 20px 5px grey;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.portfolio {
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
+  background: white;
+  text-align: center;
+}
+
+.contact img {
+  position: absolute;
+  width: 10rem;
+  left: 10%;
+}
+
+.contact h2 {
+  font-family: 'Comfortaa', cursive;
+  padding-top: 8rem;
+  font-size: 2rem;
+}
+
+.contact input {
+  padding: 0.6rem;
+  margin: 0.4rem;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.8rem;
+}
+
+.contact textarea {
+  font-family: 'Comfortaa', cursive;
+  padding: 0.6rem;
+  margin: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid grey;
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.contact input[type=submit]:hover {
+  background: #0078be;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+  color: white;
+}
+
+.contact footer {
+  background: #0078be;
+  padding: 5rem;
+  margin-top: 6rem;
+}
+
+.contact footer p {
+  float: left;
+  color: white;
+}
+
+.contact footer .icons {
+  float: right;
+}
+
+.contact footer .icons a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 1rem;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

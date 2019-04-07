@@ -1,0 +1,395 @@
+$light-color: white;
+$dark-color: black;
+$shadow: grey;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300');
+
+:root {
+  scroll-behavior: smooth;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+section.showcase {
+  height: 100vh;
+  position: absolute;
+  
+  .overlay {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    background: rgba(13,13,13,0.3);
+    padding: 3rem;
+    text-align: center;
+    animation: fade-in 5s linear;
+    animation: slide-down 2s forwards;
+
+    @keyframes slide-down {
+      from {
+        top: -150%;
+      }
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    h1 {
+      font-size: 3.8rem;
+      font-family: 'Comfortaa', cursive;
+      color: white;
+      letter-spacing: 0.5rem;
+      
+      span.red {
+        color: rgb(167, 0, 0);
+      }
+    }
+    
+    h2 {
+      color: white;
+    }
+  }
+
+  #learn-more-btn {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    padding: 1rem 2rem;
+    color: white;
+    background: rgba(13,13,13,0.4);
+    border-radius: 2rem;
+    transition: .3s;
+
+    animation: fade-in 5s linear;
+    animation: slide-up 2s forwards;
+
+    @keyframes slide-up {
+      from {
+        top: 150%;
+      }
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  #learn-more-btn:hover {
+    cursor: pointer;
+    background-color: rgb(0, 148, 208);
+    transition: .3s;
+  }
+}
+
+.collapse {
+  animation: collapse .75s backwards;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes collapse {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150vh;
+  }
+}
+
+div.nav-bar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  height: 4.5rem;
+  box-shadow: 3px 3px 12px grey;
+  background-color: white;
+
+  .logo {
+    float: left;
+    width: 50%;
+    line-height: 1.6rem;
+
+    img {
+      float: left;
+      width: 2.5rem;
+    }
+
+    .title {
+      float: left;
+      margin-left: 0.6rem;
+
+      h1 {
+        font-family: 'Comfortaa', cursive;
+        font-size: 2rem;
+
+        span.red {
+          color: rgb(167, 0, 0);
+        }
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+  ul {
+    float: right;
+    width: 50%;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        margin: 1rem;
+        line-height: 2.5rem;
+        color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+      
+      a:hover {
+        color: black;
+        transition: .2s;
+      }
+
+      a:active {
+        color: aqua;
+      }
+    }
+  }
+}
+
+.presentation {
+  padding-top: 7rem;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(33, 116, 179);
+
+  img {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    z-index: 0;
+  }
+  h1 {
+    text-align: center;
+    padding-bottom: 0.8rem;
+
+    .font, .red {
+      font-family: 'Comfortaa', cursive;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .red {
+      color: rgb(167,0,0);
+    }
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.about {
+  height: 100vh;
+  background: white;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+
+  line-height: 2rem;
+
+  h2 {
+    font-family: 'Comfortaa', cursive;
+    padding-top: 13rem;
+    font-size: 2rem;
+  }
+  p {
+    padding: 2rem 8rem;
+    font-size: 1rem;
+  }
+}
+
+.services {
+  height: 100vh;
+  text-align: center;
+  line-height: 2rem;
+  background-image: url(/assets/waves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+
+  h2 {
+    font-family: 'Comfortaa', cursive;
+    padding-top: 7rem;
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      ". firstService secondService thirdService .";
+    grid-gap: 3rem;
+    padding: 2rem;
+  }
+
+  p.service-title {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+
+  .firstService {
+    grid-area: firstService;
+    padding: 2rem;
+    box-shadow: 3px 3px 10px 3px grey;
+    background: white;
+  }
+
+  .secondService {
+    grid-area: secondService;
+    padding: 2rem;
+    box-shadow: 3px 3px 10px 3px grey;
+    background: white;
+  }
+
+  .thirdService {
+    grid-area: thirdService;
+    padding: 2rem;
+    box-shadow: 3px 3px 10px 3px grey;
+    background: white;
+  }
+
+  .hover:hover {
+    box-shadow: 3px 3px 20px 5px grey;
+    transition: .5s;
+  }
+}
+
+.portfolio {
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
+  background: white;
+  text-align: center;
+
+  img {
+    position: absolute;
+    width: 10rem;
+    left: 10%;
+  }
+  h2 {
+    font-family: 'Comfortaa', cursive;
+    padding-top: 8rem;
+    font-size: 2rem;
+  }
+
+  input {
+    padding: 0.6rem;
+    margin: 0.4rem;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8rem;
+  }
+
+  textarea {
+    font-family: 'Comfortaa', cursive;
+    padding: 0.6rem;
+    margin: 0.4rem;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
+  input[type=submit]:hover {
+    background: rgb(0, 120, 190);
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+  }
+
+  footer {
+    background: rgb(0, 120, 190);
+    padding: 5rem;
+    margin-top: 6rem;
+
+    p {
+      float: left;
+      color: white;
+    }
+
+    .icons {
+      float: right;
+
+      a {
+        text-decoration: none;
+        font-size: 2rem;
+        margin: 1rem;
+        color: white;
+      }
+    }
+  }
+}
+
